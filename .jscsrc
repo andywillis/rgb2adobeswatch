@@ -1,0 +1,64 @@
+{
+  "disallowKeywords": ["with"],
+  "disallowKeywordsOnNewLine": ["else"],
+  "disallowMixedSpacesAndTabs": true,
+  "disallowTrailingWhitespace": true,
+  "disallowEmptyBlocks": true,
+  "disallowSpacesInsideArrayBrackets": true,
+  "disallowSpacesInsideParentheses": true,
+  "disallowSpaceAfterObjectKeys": true,
+  "requireSpaceBeforeObjectValues": true,
+  "disallowTrailingComma": true,
+  "disallowYodaConditions": true,
+
+  "maximumLineLength": 100,
+
+  "safeContextKeyword": ["_this"],
+
+  "requireCapitalizedConstructors": true,
+  "requireCurlyBraces": ["if", "else", "for", "while", "do", "try", "catch"],
+
+  "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
+  "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
+  "requireSpaceBeforeBinaryOperators": ["+", "-", "/", "*", "=", "==", "===", "!=", "!=="],
+  "requireSpaceAfterBinaryOperators": [",", "+", "-", "/", "*", "=", "==", "===", "!=", "!=="],
+  "disallowSpaceBeforeBinaryOperators": [","],
+
+  "requireSpacesInConditionalExpression": {
+      "afterTest": true,
+      "beforeConsequent": true,
+      "afterConsequent": true,
+      "beforeAlternate": true
+  },
+  "validateParameterSeparator": ", ",
+  "disallowNewlineBeforeBlockStatements": true,
+  "requireSpaceAfterLineComment": true,
+  "disallowMultipleLineBreaks": true,
+  "requireSpaceAfterKeywords": ["if", "else", "for", "while", "do", "switch", "return", "try", "catch"],
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpacesInsideObjectBrackets": "all",
+  "requireCommaBeforeLineBreak": true,
+  "requireLineFeedAtFileEnd": true,
+  "requireCamelCaseOrUpperCaseIdentifiers": true,
+
+  "requireSpacesInFunctionDeclaration": {
+      "beforeOpeningCurlyBrace": true
+  },
+
+  "disallowSpacesInFunctionDeclaration": {
+      "beforeOpeningRoundBrace": true
+  },
+
+  "requireSpacesInAnonymousFunctionExpression": {
+      "beforeOpeningRoundBrace": true,
+      "beforeOpeningCurlyBrace": true
+  },
+
+  "validateIndentation": 2,
+  "validateJSDoc": {
+    "checkParamNames": true,
+    "checkRedundantParams": true,
+    "requireParamTypes": true
+  },
+  "validateQuoteMarks": "'"
+}
