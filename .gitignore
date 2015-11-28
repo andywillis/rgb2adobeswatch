@@ -4,3 +4,4 @@ node_modules
 .sublime-workspace
 npm-debug.log
 test/reports
+deploy
