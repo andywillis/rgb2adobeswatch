@@ -1,18 +1,19 @@
 function createHeader(swatchTitle, numberOfBlocks) {
-  const out = [];
-  out.push({ val: 'ASEF', type: 'char', size: 4 });
-  out.push({ val: 1, type: '16', size: 2 });
-  out.push({ val: 0, type: '16', size: 2 });
-  out.push({ val: numberOfBlocks, type: '32', size: 4 });
-  out.push({ val: 'c0', type: 'hex', size: 1 });
-  out.push({ val: '01', type: 'hex', size: 1 });
-  out.push({ val: swatchTitle.length * 2 + 2, type: '32', size: 4 });
-  out.push({ val: swatchTitle.length, type: '16', size: 2 });
-  out.push({ val: swatchTitle, type: 'doub', size: swatchTitle.length * 2 });
-  return out;
+  return [
+    { val: 'ASEF', type: 'char', size: 4 },
+    { val: 1, type: '16', size: 2 },
+    { val: 0, type: '16', size: 2 },
+    { val: numberOfBlocks, type: '32', size: 4 },
+    { val: 'c0', type: 'hex', size: 1 },
+    { val: '01', type: 'hex', size: 1 },
+    { val: swatchTitle.length * 2 + 2, type: '32', size: 4 },
+    { val: swatchTitle.length, type: '16', size: 2 },
+    { val: swatchTitle, type: 'doub', size: swatchTitle.length * 2 }
+  ];
 }
 
 function createBody(rgbData, out) {
+
   for (const sw in rgbData) {
     if (rgbData.hasOwnProperty(sw)) {
       const s = rgbData[sw];
@@ -25,7 +26,7 @@ function createBody(rgbData, out) {
       for (const c in s) {
         if (s.hasOwnProperty(c)) {
           const col = s[c].toString(16);
-          cStr += (col.length === 1) ? '0' + col : col;        
+          cStr += (col.length === 1) ? '0' + col : col;
         }
       }
 
@@ -42,6 +43,7 @@ function createBody(rgbData, out) {
       out.push({ val: 2, type: '16', size: 2 });
     }
   }
+
   return out;
 }
 
