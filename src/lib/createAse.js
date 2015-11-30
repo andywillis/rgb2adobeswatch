@@ -13,37 +13,47 @@ function createHeader(swatchTitle, numberOfBlocks) {
 }
 
 function createBody(rgbData, out) {
-  for (let sw in rgbData) {
-    const s = rgbData[sw];
-    const webColor = '##{cStr} ';
-    const sStrL = 8;
-    const blLen = 36;
+  for (const sw in rgbData) {
+    if (rgbData.hasOwnProperty(sw)) {
+      const s = rgbData[sw];
+      const webColor = '##{cStr} ';
+      const sStrL = 8;
+      const blLen = 36;
 
-    let cStr = '';
+      let cStr = '';
 
-    for (let c in s) {
-      const col = s[c].toString(16);
-      cStr += (col.length === 1) ? '0' + col : col;
+      for (const c in s) {
+        if (s.hasOwnProperty(c)) {
+          const col = s[c].toString(16);
+          cStr += (col.length === 1) ? '0' + col : col;        
+        }
+      }
+
+      const sStr = webColor.replace('#{cStr}', cStr).toUpperCase();
+
+      out.push({ val: 1, type: '16', size: 2 });
+      out.push({ val: blLen, type: '32', size: 4 });
+      out.push({ val: sStrL, type: '16', size: 2 });
+      out.push({ val: sStr, type: 'doub', size: sStrL * 2 });
+      out.push({ val: 'RGB ', type: 'char', size: 4 });
+      out.push({ val: s[0] / 255, type: 'p32', size: 4 });
+      out.push({ val: s[1] / 255, type: 'p32', size: 4 });
+      out.push({ val: s[2] / 255, type: 'p32', size: 4 });
+      out.push({ val: 2, type: '16', size: 2 });
     }
-
-    const sStr = webColor.replace('#{cStr}', cStr).toUpperCase();
-
-    out.push({ val: 1, type: '16', size: 2 });
-    out.push({ val: blLen, type: '32', size: 4 });
-    out.push({ val: sStrL, type: '16', size: 2 });
-    out.push({ val: sStr, type: 'doub', size: sStrL * 2 });
-    out.push({ val: 'RGB ', type: 'char', size: 4 });
-    out.push({ val: s[0] / 255, type: 'p32', size: 4 });
-    out.push({ val: s[1] / 255, type: 'p32', size: 4 });
-    out.push({ val: s[2] / 255, type: 'p32', size: 4 });
-    out.push({ val: 2, type: '16', size: 2 });
   }
   return out;
 }
 
 function createBuffer(out) {
   let bLen = 0;
-  for (let el in out) { bLen += out[el].size; };
+
+  for (const el in out) {
+    if (out.hasOwnProperty(el)) {
+      bLen += out[el].size;
+    }
+  }
+
   const b = new Buffer(bLen);
   let offset = 0;
 
@@ -63,9 +73,9 @@ function createBuffer(out) {
     case '32': b.writeUInt32BE(v, offset); break;
     case 'p32': b.writeFloatBE(v, offset); break;
     }
-
     offset += out[obj].size;
   }
+
   return b;
 }
 
