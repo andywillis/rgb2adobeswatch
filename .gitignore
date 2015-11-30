@@ -1,7 +1,7 @@
 node_modules
 .tmp
-.sublime-project
-.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 npm-debug.log
 test/reports
 build
