@@ -1,0 +1,391 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "example/example.js",
+			"settings":
+			{
+				"buffer_size": 145,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/index.js",
+			"settings":
+			{
+				"buffer_size": 240,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/lib/getSwatchData.js",
+			"settings":
+			{
+				"buffer_size": 539,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: d",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: l",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: r",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: e",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 571.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/example/createAse.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/index.htm",
+		"/C/Users/Andy/Development/code/git/swatch/swatch.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/src/lib/createAse.js",
+		"/C/Users/Andy/Development/code/git/spotmaps/lib/createLibrary.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/src/lib/fn.js",
+		"/C/Users/Andy/Development/code/git/spotmaps/routes/bin.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/README.md",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/package.json",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/src/lib/promise.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/.eslintrc",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/build/bundle.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/build/index.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/build/lib/promise.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/commands.txt",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/src/index.js",
+		"/C/Users/Andy/Development/code/git/swatch/quantize.js",
+		"/C/Users/Andy/Development/code/git/swatch/data.js",
+		"/C/Users/Andy/Development/code/git/vendatemplates/htdocs/content/ebiz/shop/resources/js/Venda/modules/utilities/utilities.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/index.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/deploy/bundle.js",
+		"/C/Users/Andy/Development/code/git/rgb2adobeswatch/bundle.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/index2.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/package.json",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/.eslintrc",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/commands.txt",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/index.htm",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/lib/fn.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/lib/promise.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/out.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/lib/Promise.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/index.js",
+		"/C/Users/Andy/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/script-compiled.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/Promise.js",
+		"/C/Users/Andy/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Andy/Development/code/git/swatch/README.md",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/node_modules/eslint-config-airbnb/index.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/node_modules/eslint-config-airbnb/legacy.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/node_modules/eslint-config-airbnb/base.js",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/node_modules/eslint-config-airbnb/.eslintrc",
+		"/C/Users/Andy/Development/code/git/RGBtoAdobeSwatch/node_modules/eslint-config-airbnb/README.md",
+		"/C/Users/Andy/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/Andy/Downloads/job letter.txt",
+		"/C/Users/Andy/Downloads/mozilla.txt",
+		"/C/Users/Andy/AppData/Roaming/Mozilla/Firefox/Profiles/2u7s1n7t.dev-edition-default/gm_scripts/Twitter/Twitter.user.js",
+		"/C/Windows/Logs/CBS/CBS.log",
+		"/C/Users/Andy/AppData/Roaming/Mozilla/Firefox/Profiles/2u7s1n7t.dev-edition-default/gm_scripts/Twittre/Twittre.user.js",
+		"/C/Users/Andy/AppData/Roaming/Comma Separated Values (Windows).EML",
+		"/C/Users/Andy/Development/code/git/venda/loc1.js",
+		"/C/Users/Andy/Downloads/remove.txt",
+		"/C/Users/Andy/Development/code/git/es6tests/lib/main.js",
+		"/C/Users/Andy/Downloads/aegis_v1.7/aegis.vbs",
+		"/C/Users/Andy/Downloads/aegis_v1.7/aegis.reg",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/rules/errors.js",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/rules/style.js",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/rules/variables.js",
+		"/C/Users/Andy/Development/code/git/es6tests/lib/bootstrap.js",
+		"/C/Users/Andy/Development/code/git/es6tests/.eslintrc",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/index.js",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/rules/react.js",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/base.js",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/legacy.js",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/rules/best-practices.js",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/rules/es6.js",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/package.json",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/README.md",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/.eslintrc",
+		"/C/Users/Andy/Development/code/git/es6tests/node_modules/eslint-config-airbnb/rules/node.js",
+		"/C/Users/Andy/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Andy/Development/code/git/es6tests/jspm_packages/.dependencies.json",
+		"/C/Users/Andy/Development/code/git/es6tests/.git/hooks/pre-commit",
+		"/C/Users/Andy/Development/code/git/es6tests/.git/hooks/canonicalize_filename.sh",
+		"/C/Users/Andy/Development/code/git/es6tests/jspm_packages/npm/lodash-node@3.10.1/modern/array/uniq.js",
+		"/C/Users/Andy/Development/code/git/es6tests/config.js",
+		"/C/Users/Andy/Development/code/git/es6tests/index.htm",
+		"/C/Users/Andy/Development/code/git/es6tests/index.js",
+		"/C/Users/Andy/Development/code/git/lite-boilerplate/index.html",
+		"/C/Users/Andy/Development/code/git/lite-boilerplate/app.js"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ase",
+			"tab",
+			")",
+			"(",
+			"conso",
+			"cons",
+			"con",
+			"tab"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"]",
+			"["
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "example/example.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/lib/getSwatchData.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								104,
+								104
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "rgb2AdobeSwatch.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
