@@ -1,6 +1,6 @@
 import fs from 'fs';
 import rgb2AdobeSwatch from '../src/index';
-import rgbData from './data';
+import rgbObj from './data';
 
 /**
  * writeFile returns a function for use in the
@@ -13,4 +13,4 @@ function writeFile() {
   };
 }
 
-rgb2AdobeSwatch(rgbData, writeFile);
+rgb2AdobeSwatch(rgbObj, writeFile);
