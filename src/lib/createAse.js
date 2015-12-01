@@ -1,8 +1,8 @@
 /**
- * [createHeader description]
- * @param  {[type]} swatchTitle    [description]
- * @param  {[type]} numberOfBlocks [description]
- * @return {[type]}                [description]
+ * createHeader creates the buffer header
+ * @param  {string} swatchTitle    Swatch title
+ * @param  {number} numberOfBlocks Number of data blocks
+ * @return {array}                 Header array
  */
 function createHeader(swatchTitle, numberOfBlocks) {
   return [
@@ -19,10 +19,10 @@ function createHeader(swatchTitle, numberOfBlocks) {
 }
 
 /**
- * [createBody description]
- * @param  {[type]} rgbData [description]
- * @param  {[type]} out     [description]
- * @return {[type]}         [description]
+ * createBody creates the body of the buffer from the quantized
+ * rgb data.
+ * @param  {array} rgbData rgb array
+ * @return {array}         array of buffer objects
  */
 function createBody(rgbData) {
 
@@ -56,9 +56,10 @@ function createBody(rgbData) {
 }
 
 /**
- * [createBuffer description]
- * @param  {[type]} out [description]
- * @return {[type]}     [description]
+ * createBuffer creates a binary buffer from the compiled
+ * header and body buffer objects
+ * @param  {array} rgbData  Combined header and body buffer objects
+ * @return {buffer}         ase data buffer
  */
 function createBuffer(rgbData) {
 
@@ -93,8 +94,9 @@ function createBuffer(rgbData) {
 }
 
 /**
- * [createAse description]
- * @return {[type]} [description]
+ * createAse returns the binary buffer
+ * created from the header and body buffer objects
+ * @return {buffer} Compiled ase buffer
  */
 export default function createAse() {
   return function (rgbObj) {

@@ -1,7 +1,0 @@
-browserify index.js -o out.js -t [ babelify --presets [ es2015 ] ]
-
-npm install babel-cli babel-loader eslint eslint-loader eslint-config-airbnb babel-eslint esl int-plugin-react -g
-
-browserify src/index.js -d -t [ babelify --sourceMapRelative . --presets [ es2015 ] ] -p [ minifyify --map bundle.map --output deploy/bundle.map] > deploy/bundle.js
-
-browserify index.js -o bundle.js -t [ babelify --presets [ es2015 ] ]
