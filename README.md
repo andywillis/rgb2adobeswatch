@@ -2,6 +2,10 @@
 
 Converts an array of RGB values to Adobe swatch format.
 
+`npm install rgb2adobeswatch`
+
+## How to use
+
 The module accepts an object with a title property and a data property...
 
 ```javascript
@@ -17,7 +21,7 @@ var rgbObj = {
 rgb2AdobeSwatch(rgbObj, writeFile);
 ```
 
----
+## Conversions
 
 To convert the ES2015 code to ES5:
 
