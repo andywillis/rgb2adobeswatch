@@ -2,6 +2,8 @@
 
 Converts an array of RGB values to Adobe swatch format.
 
+## Install
+
 `npm install rgb2adobeswatch`
 
 ## How to use
