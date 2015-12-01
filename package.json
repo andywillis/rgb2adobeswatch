@@ -1,29 +1,36 @@
 {
   "name": "rgb2adobeswatch",
   "version": "1.0.0",
-  "description": "Converts an array of RGB values to Adobe swatch format",
-  "main": "index2.js",
-  "author": "",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "browserify src/index.js -d -t [ babelify --sourceMapRelative . --presets [ es2015 ] ] -p [ minifyify --map bundle.map --output build/bundle.map] > build/bundle.js",
-    "babel": "babel src --out-dir ES5 --presets es2015"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/andywillis/RGBtoAdobeSwatch.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andywillis/RGBtoAdobeSwatch/issues"
+  "description": "Converts rgb array values to ase format",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.1.18",
+    "lodash.uniq": "^3.2.2",
+    "quantize": "^1.0.1",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
-    "minifyify": "^7.1.0",
-    "lodash.uniq": "^3.2.2",
-    "quantize": "^1.0.1"
+    "minifyify": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andywillis/rgb2adobeswatch.git"
+  },
+  "keywords": [
+    "swatch",
+    "ase",
+    "rgb",
+    "adobe"
+  ],
+  "author": "Andy Willis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andywillis/rgb2adobeswatch/issues"
   }
 }
