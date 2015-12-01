@@ -1,3 +1,9 @@
+/**
+ * [createHeader description]
+ * @param  {[type]} swatchTitle    [description]
+ * @param  {[type]} numberOfBlocks [description]
+ * @return {[type]}                [description]
+ */
 function createHeader(swatchTitle, numberOfBlocks) {
   return [
     { val: 'ASEF', type: 'char', size: 4 },
@@ -12,86 +18,91 @@ function createHeader(swatchTitle, numberOfBlocks) {
   ];
 }
 
-function createBody(rgbData, out) {
+/**
+ * [createBody description]
+ * @param  {[type]} rgbData [description]
+ * @param  {[type]} out     [description]
+ * @return {[type]}         [description]
+ */
+function createBody(rgbData) {
 
-  for (const sw in rgbData) {
-    if (rgbData.hasOwnProperty(sw)) {
-      const s = rgbData[sw];
-      const webColor = '##{cStr} ';
-      const sStrL = 8;
-      const blLen = 36;
+  const out = [];
 
-      let cStr = '';
+  rgbData.forEach(color => {
 
-      for (const c in s) {
-        if (s.hasOwnProperty(c)) {
-          const col = s[c].toString(16);
-          cStr += (col.length === 1) ? '0' + col : col;
-        }
-      }
+    const sStrL = 8;
+    const blLen = 36;
 
-      const sStr = webColor.replace('#{cStr}', cStr).toUpperCase();
+    const cStr = color.map(level => {
+      const col = level.toString(16);
+      return col.length === 1 ? '0' + col : col;
+    }).join('');
 
-      out.push({ val: 1, type: '16', size: 2 });
-      out.push({ val: blLen, type: '32', size: 4 });
-      out.push({ val: sStrL, type: '16', size: 2 });
-      out.push({ val: sStr, type: 'doub', size: sStrL * 2 });
-      out.push({ val: 'RGB ', type: 'char', size: 4 });
-      out.push({ val: s[0] / 255, type: 'p32', size: 4 });
-      out.push({ val: s[1] / 255, type: 'p32', size: 4 });
-      out.push({ val: s[2] / 255, type: 'p32', size: 4 });
-      out.push({ val: 2, type: '16', size: 2 });
-    }
-  }
+    const sStr = '##{cStr}'.replace('#{cStr}', cStr).toUpperCase();
+
+    out.push({ val: 1, type: '16', size: 2 });
+    out.push({ val: blLen, type: '32', size: 4 });
+    out.push({ val: sStrL, type: '16', size: 2 });
+    out.push({ val: sStr, type: 'doub', size: sStrL * 2 });
+    out.push({ val: 'RGB ', type: 'char', size: 4 });
+    out.push({ val: color[0] / 255, type: 'p32', size: 4 });
+    out.push({ val: color[1] / 255, type: 'p32', size: 4 });
+    out.push({ val: color[2] / 255, type: 'p32', size: 4 });
+    out.push({ val: 2, type: '16', size: 2 });
+
+  });
 
   return out;
 }
 
-function createBuffer(out) {
-  let bLen = 0;
+/**
+ * [createBuffer description]
+ * @param  {[type]} out [description]
+ * @return {[type]}     [description]
+ */
+function createBuffer(rgbData) {
 
-  for (const el in out) {
-    if (out.hasOwnProperty(el)) {
-      bLen += out[el].size;
-    }
-  }
+  const bLen = rgbData.reduce((p, c) => {
+    return p + c.size;
+  }, 0);
 
-  const b = new Buffer(bLen);
+  const buffer = new Buffer(bLen);
   let offset = 0;
 
-  for (let obj = 0, len = out.length; obj < len; obj ++) {
-    const v = out[obj].val;
+  rgbData.forEach(obj => {
+    const value = obj.val;
 
-    switch (out[obj].type) {
+    switch (obj.type) {
     case 'doub':
-      for (let el = 0, l = v.length; el < l; el++) {
-        b.write('', offset + el * 2);
-        b.write(v[el], offset + el * 2 + 1);
+      for (let el = 0, l = value.length; el < l; el++) {
+        buffer.write('', offset + el * 2);
+        buffer.write(value[el], offset + el * 2 + 1);
       }
       break;
-    case 'char': b.write(v, offset); break;
-    case 'hex': b.write(v, offset, 'hex'); break;
-    case '16': b.writeUInt16BE(v, offset); break;
-    case '32': b.writeUInt32BE(v, offset); break;
-    case 'p32': b.writeFloatBE(v, offset); break;
+    case 'char': buffer.write(value, offset); break;
+    case 'hex': buffer.write(value, offset, 'hex'); break;
+    case '16': buffer.writeUInt16BE(value, offset); break;
+    case '32': buffer.writeUInt32BE(value, offset); break;
+    case 'p32': buffer.writeFloatBE(value, offset); break;
     }
-    offset += out[obj].size;
-  }
 
-  return b;
+    offset += obj.size;
+  });
+
+  return buffer;
 }
 
+/**
+ * [createAse description]
+ * @return {[type]} [description]
+ */
 export default function createAse() {
   return function (rgbObj) {
     const rgbData = rgbObj.data;
     const swatchTitle = rgbObj.title;
     const numberOfBlocks = rgbData.length + 1;
-
-    let out = createHeader(swatchTitle, numberOfBlocks);
-    out = createBody(rgbData, out);
-    const buffer = createBuffer(out);
-
-    rgbObj.buffer = buffer;
-    return rgbObj;
+    const header = createHeader(swatchTitle, numberOfBlocks);
+    const body = createBody(rgbData);
+    return createBuffer(header.concat(body));
   };
 }
