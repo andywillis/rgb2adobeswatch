@@ -1,6 +1,6 @@
 {
   "name": "rgb2adobeswatch",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Converts rgb array values to ase format",
   "main": "index.js",
   "directories": {
