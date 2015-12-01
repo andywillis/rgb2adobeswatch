@@ -2,6 +2,15 @@ import processData from './lib/promise';
 import getQuantizedData from './lib/getQuantizedData';
 import createAse from './lib/createAse';
 
+/**
+ * rgb2AdobeSwatch uses a bespoke promise to chain together
+ * conversion methods
+ * @param  {obj}      obj       The data object which contains a title property
+ *                              and a data property comprised of an array of rgb
+ *                              arrays. See example/data.js for details
+ * @param  {function} callback  Callback function. See example/example.js for
+ *                              details.
+ */
 export default function rgb2AdobeSwatch(obj, callback) {
   processData(obj)
     .then(getQuantizedData())
