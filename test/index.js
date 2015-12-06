@@ -1,5 +1,5 @@
 var test = require('tape');
-var rgb2AdobeSwatch = require('../dist/index').default;
+var rgb2AdobeSwatch = require('../build/index').default;
 
 test('rgb2AdobeSwatch is a function', function (t) {
   t.plan(1);

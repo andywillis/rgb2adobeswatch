@@ -1,47 +1,46 @@
 {
   "name": "rgb2adobeswatch",
   "version": "1.4.1",
-  "description": "Converts rgb array values to ase format",
-  "main": "index.js",
+  "description": "Converts an array of RGB values to Adobe ASE swatch format",
+  "main": "lib/index.js",
   "directories": {
-    "example": "example"
+    "doc": "doc",
+    "example": "example",
+    "test": "test"
   },
-  "dependencies": {
-    "babel": "^6.3.13",
-    "babel-cli": "^6.3.13",
-    "babel-eslint": "^4.1.6",
-    "babel-preset-es2015": "^6.1.18",
-    "babelify": "^7.2.0",
+  "devDependencies": {
+    "babel-cli": "^6.3.15",
+    "babel-preset-es2015": "^6.3.13",
     "documentation": "^3.0.4",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.0.0",
-    "eslint-plugin-react": "^3.11.3",
-    "lodash.uniq": "^3.2.2",
-    "minifyify": "^7.1.0",
-    "quantize": "^1.0.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.2.2"
   },
+  "dependencies": {
+    "lodash.uniq": "^3.2.2",
+    "quantize": "^1.0.1"
+  },
   "scripts": {
-    "test": "npm run es5 & tape test/*.js | tap-spec",
-    "bundle": "browserify src/index.js -d -t [ babelify --sourceMapRelative . --presets [ es2015 ] ] -p [ minifyify --map bundle.map --output build/bundle.map] > build/bundle.js",
-    "es5": "babel src --out-dir dist --presets es2015",
-    "example": "cd example & babel-node example.js --presets es2015",
+    "test": "npm run es5 && tape test/*.js | tap-spec",
+    "example": "cd example && node example.js",
+    "es5": "babel lib --out-dir build --presets es2015",
     "doc": "documentation src/index.js -o doc -f html -g"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/andywillis/rgb2adobeswatch.git"
+    "url": "git+https://github.com/andywillis/rgb2adobeswatch.git"
   },
   "keywords": [
+    "RGB",
+    "adobe",
     "swatch",
-    "ase",
-    "rgb",
-    "adobe"
+    "ase"
   ],
   "author": "Andy Willis",
-  "license": "FSF",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/andywillis/rgb2adobeswatch/issues"
-  }
+  },
+  "homepage": "https://github.com/andywillis/rgb2adobeswatch#readme"
 }
