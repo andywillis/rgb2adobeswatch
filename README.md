@@ -27,7 +27,7 @@ rgb2AdobeSwatch(rgbObj, writeFile);
 
 `npm run es5`.
 
-Files will be placed in the `build` folder.
+Files will be placed in the `lib` folder.
 
 ## Run the example
 
