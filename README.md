@@ -25,12 +25,18 @@ rgb2AdobeSwatch(rgbObj, writeFile);
 
 ## Conversions
 
-To ES5: `npm run es5`.
+ES2015 to ES5: `npm run es5`.
 
 To browserify: `npm run bundle`.
 
+## Example
+
 To run the example: `npm run example`. The `.ase` file will appear in the example folder.
 
+## Documentation
+
 To create the documentation: `npm run doc`.
+
+## Tests
 
 To run the tests: `npm run test`.
