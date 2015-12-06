@@ -23,7 +23,7 @@
     "tape": "^4.2.2"
   },
   "scripts": {
-    "test": "npm run es5 & node test/index.js | tap-spec",
+    "test": "npm run es5 & tape test/*.js | tap-spec",
     "bundle": "browserify src/index.js -d -t [ babelify --sourceMapRelative . --presets [ es2015 ] ] -p [ minifyify --map bundle.map --output build/bundle.map] > build/bundle.js",
     "es5": "babel src --out-dir dist --presets es2015",
     "example": "cd example & babel-node example.js --presets es2015",
