@@ -3,7 +3,7 @@ import uniq from 'lodash.uniq';
 
 /**
  * getQuantizedData returns a quantized data set
- * @return {swatchData} The quantized data set
+ * @return {array} The quantized data set
  */
 export default function getQuantizedData() {
   return function (rgbObj) {

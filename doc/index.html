@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro:400,500,700' rel='stylesheet' type='text/css'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='container'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed md-show fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block field'
+            type='text' />
+          <div id='toc'>
+              <a
+                href='#createAse'
+                class='block bold'>
+                createAse
+              </a>
+              <a
+                href='#createBody'
+                class='block bold'>
+                createBody
+              </a>
+              <a
+                href='#createBuffer'
+                class='block bold'>
+                createBuffer
+              </a>
+              <a
+                href='#createHeader'
+                class='block bold'>
+                createHeader
+              </a>
+              <a
+                href='#getQuantizedData'
+                class='block bold'>
+                getQuantizedData
+              </a>
+              <a
+                href='#promise'
+                class='block bold'>
+                promise
+              </a>
+              <a
+                href='#rgb2AdobeSwatch'
+                class='block bold'>
+                rgb2AdobeSwatch
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        <div class='px2'>
+<div class='py1'><section class='py2 clearfix'>
+  <h2 id='createAse' class='mt0'>
+    createAse<span class='gray'></span>
+  </h2>
+    <p><a href='https://github.com/andywillis/rgb2adobeswatch/blob/000ced6b70611ea39f3ed24395816c1f5361781d/c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\createAse.js#L101-L110'><code>c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\createAse.js</code></a></p>
+  <p>createAse returns the binary buffer
+created from the header and body buffer objects</p>
+
+      <h4>Returns</h4>
+      <code><code><a href="https://nodejs.org/api/buffer.html">buffer</a></code></code>
+      :
+      <div class='force-inline'>
+        <p>Compiled ase buffer</p>
+
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='createBody' class='mt0'>
+    createBody<span class='gray'>(rgbData)</span>
+  </h2>
+    <p><a href='https://github.com/andywillis/rgb2adobeswatch/blob/000ced6b70611ea39f3ed24395816c1f5361781d/c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\createAse.js#L27-L56'><code>c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\createAse.js</code></a></p>
+  <p>createBody creates the body of the buffer from the quantized
+rgb data.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code> <strong>rgbData</strong>
+          :
+          <div class='force-inline'>
+            <p>rgb array</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code></code>
+      :
+      <div class='force-inline'>
+        <p>array of buffer objects</p>
+
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='createBuffer' class='mt0'>
+    createBuffer<span class='gray'>(rgbData)</span>
+  </h2>
+    <p><a href='https://github.com/andywillis/rgb2adobeswatch/blob/000ced6b70611ea39f3ed24395816c1f5361781d/c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\createAse.js#L64-L94'><code>c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\createAse.js</code></a></p>
+  <p>createBuffer creates a binary buffer from the compiled
+header and body buffer objects</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code> <strong>rgbData</strong>
+          :
+          <div class='force-inline'>
+            <p>Combined header and body buffer objects</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://nodejs.org/api/buffer.html">buffer</a></code></code>
+      :
+      <div class='force-inline'>
+        <p>ase data buffer</p>
+
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='createHeader' class='mt0'>
+    createHeader<span class='gray'>(swatchTitle, numberOfBlocks)</span>
+  </h2>
+    <p><a href='https://github.com/andywillis/rgb2adobeswatch/blob/000ced6b70611ea39f3ed24395816c1f5361781d/c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\createAse.js#L7-L19'><code>c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\createAse.js</code></a></p>
+  <p>createHeader creates the buffer header</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>swatchTitle</strong>
+          :
+          <div class='force-inline'>
+            <p>Swatch title</p>
+
+          </div>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>numberOfBlocks</strong>
+          :
+          <div class='force-inline'>
+            <p>Number of data blocks</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code></code>
+      :
+      <div class='force-inline'>
+        <p>Header array</p>
+
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='getQuantizedData' class='mt0'>
+    getQuantizedData<span class='gray'></span>
+  </h2>
+    <p><a href='https://github.com/andywillis/rgb2adobeswatch/blob/000ced6b70611ea39f3ed24395816c1f5361781d/c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\getQuantizedData.js#L8-L17'><code>c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\getQuantizedData.js</code></a></p>
+  <p>getQuantizedData returns a quantized data set</p>
+
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code></code>
+      :
+      <div class='force-inline'>
+        <p>The quantized data set</p>
+
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='promise' class='mt0'>
+    promise<span class='gray'>(data)</span>
+  </h2>
+    <p><a href='https://github.com/andywillis/rgb2adobeswatch/blob/000ced6b70611ea39f3ed24395816c1f5361781d/c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\promise.js#L7-L18'><code>c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\lib\promise.js</code></a></p>
+  <p>Promise returns an object with then() and done() methods
+to allow chaining.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code> <strong>data</strong>
+          :
+          <div class='force-inline'>
+            <p>The data to be processed.</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code></code>
+      :
+      <div class='force-inline'>
+        <p>The processed data.</p>
+
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='rgb2AdobeSwatch' class='mt0'>
+    rgb2AdobeSwatch<span class='gray'>(obj, callback)</span>
+  </h2>
+    <p><a href='https://github.com/andywillis/rgb2adobeswatch/blob/000ced6b70611ea39f3ed24395816c1f5361781d/c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\index.js#L14-L19'><code>c:\Users\Andy\Development\code\git\rgb2adobeswatch\src\index.js</code></a></p>
+  <p>rgb2AdobeSwatch uses a bespoke promise to chain together
+conversion methods</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code>obj</code> <strong>obj</strong>
+          :
+          <div class='force-inline'>
+            <p>The data object which contains a title property
+and a data property comprised of an array of rgb
+arrays. See example/data.js for details</p>
+
+          </div>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code> <strong>callback</strong>
+          :
+          <div class='force-inline'>
+            <p>Callback function. See example/example.js for
+details.</p>
+
+          </div>
+        </li>
+    </ul>
+</section>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

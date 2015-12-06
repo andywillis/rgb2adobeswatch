@@ -25,19 +25,12 @@ rgb2AdobeSwatch(rgbObj, writeFile);
 
 ## Conversions
 
-To convert the ES2015 code to ES5:
-
-Install the following globally:
-
-`npm install babel-cli babel-loader eslint eslint-loader eslint-config-airbnb babel-eslint esl int-plugin-react -g`
-
-Then: `npm run babel`.
+To ES5: `npm run es5`.
 
 To browserify: `npm run bundle`.
 
-To run the example:
+To run the example: `npm run example`. The `.ase` file will appear in the example folder.
 
-* `cd example`
-* `babel-node example.js --presets es2015`
+To create the documentation: `npm run doc`.
 
-The .ase file will appear in the example folder.
+To run the tests: `npm run test`.
