@@ -26,7 +26,7 @@
     "test": "npm run es5 && tape test/*.js | tap-spec",
     "example": "cd example && babel-node example.js --presets es2015",
     "es5": "babel src --out-dir lib --presets es2015",
-    "doc": "documentation index.js -o doc -f html -g",
+    "doc": "documentation lib/index.js -o doc -f html -g",
     "compile": "npm run doc && npm run es5",
     "prepublish": "npm run compile"
   },
