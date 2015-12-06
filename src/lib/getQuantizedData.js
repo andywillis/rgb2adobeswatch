@@ -2,7 +2,7 @@ import quantize from 'quantize';
 import uniq from 'lodash.uniq';
 
 /**
- * getQuantizedData returns a quantized data set
+ * Returns a quantized data set
  * @return {array} The quantized data set
  */
 export default function getQuantizedData() {

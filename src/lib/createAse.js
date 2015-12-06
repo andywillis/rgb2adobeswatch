@@ -1,5 +1,5 @@
 /**
- * createHeader creates the buffer header
+ * Creates the buffer header
  * @param  {string} swatchTitle    Swatch title
  * @param  {number} numberOfBlocks Number of data blocks
  * @return {array}                 Header array
@@ -19,8 +19,7 @@ function createHeader(swatchTitle, numberOfBlocks) {
 }
 
 /**
- * createBody creates the body of the buffer from the quantized
- * rgb data.
+ * Creates the body of the buffer from the quantized rgb data.
  * @param  {array} rgbData rgb array
  * @return {array}         array of buffer objects
  */
@@ -56,7 +55,7 @@ function createBody(rgbData) {
 }
 
 /**
- * createBuffer creates a binary buffer from the compiled
+ * Creates a binary buffer from the compiled
  * header and body buffer objects
  * @param  {array} rgbData  Combined header and body buffer objects
  * @return {buffer}         ase data buffer
@@ -74,17 +73,17 @@ function createBuffer(rgbData) {
     const value = obj.val;
 
     switch (obj.type) {
-    case 'doub':
-      for (let el = 0, l = value.length; el < l; el++) {
-        buffer.write('', offset + el * 2);
-        buffer.write(value[el], offset + el * 2 + 1);
-      }
-      break;
-    case 'char': buffer.write(value, offset); break;
-    case 'hex': buffer.write(value, offset, 'hex'); break;
-    case '16': buffer.writeUInt16BE(value, offset); break;
-    case '32': buffer.writeUInt32BE(value, offset); break;
-    case 'p32': buffer.writeFloatBE(value, offset); break;
+      case 'doub':
+        for (let el = 0, l = value.length; el < l; el++) {
+          buffer.write('', offset + el * 2);
+          buffer.write(value[el], offset + el * 2 + 1);
+        }
+        break;
+      case 'char': buffer.write(value, offset); break;
+      case 'hex': buffer.write(value, offset, 'hex'); break;
+      case '16': buffer.writeUInt16BE(value, offset); break;
+      case '32': buffer.writeUInt32BE(value, offset); break;
+      case 'p32': buffer.writeFloatBE(value, offset); break;
     }
 
     offset += obj.size;
@@ -94,7 +93,7 @@ function createBuffer(rgbData) {
 }
 
 /**
- * createAse returns the binary buffer
+ * Returns the binary buffer
  * created from the header and body buffer objects
  * @return {buffer} Compiled ase buffer
  */
