@@ -19,12 +19,13 @@
     "lodash.uniq": "^3.2.2",
     "minifyify": "^7.1.0",
     "quantize": "^1.0.1",
+    "tap-spec": "^4.1.1",
     "tape": "^4.2.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run es5 & node test/index.js | tap-spec",
     "bundle": "browserify src/index.js -d -t [ babelify --sourceMapRelative . --presets [ es2015 ] ] -p [ minifyify --map bundle.map --output build/bundle.map] > build/bundle.js",
-    "es5": "babel src --out-dir build/ES5 --presets es2015",
+    "es5": "babel src --out-dir dist --presets es2015",
     "example": "cd example & babel-node example.js --presets es2015",
     "doc": "documentation src/index.js -o doc -f html -g"
   },
