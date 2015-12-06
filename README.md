@@ -25,9 +25,7 @@ rgb2AdobeSwatch(rgbObj, writeFile);
 
 ## Conversions
 
-ES2015 to ES5: `npm run es5`.
-
-To browserify: `npm run bundle`.
+ES2015 to ES5: `npm run es5`. Files will be placed in the `build` folder.
 
 ## Example
 
@@ -39,4 +37,4 @@ To create the documentation: `npm run doc`.
 
 ## Tests
 
-To run the tests: `npm run test`.
+To run the tests: `npm test`.
