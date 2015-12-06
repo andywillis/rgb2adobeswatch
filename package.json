@@ -22,10 +22,11 @@
     "quantize": "^1.0.1"
   },
   "scripts": {
-    "test": "npm run es5 && tape test/*.js | tap-spec",
+    "test": "npm run compile && tape test/*.js | tap-spec",
     "example": "cd example && node example.js",
     "es5": "babel lib --out-dir build --presets es2015",
-    "doc": "documentation src/index.js -o doc -f html -g"
+    "doc": "documentation lib/index.js -o doc -f html -g",
+    "compile": "npm run doc && npm run es5"
   },
   "repository": {
     "type": "git",
