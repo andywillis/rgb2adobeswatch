@@ -1,5 +1,5 @@
 var test = require('tape');
-var createAse = require('../build/createAse').default;
+var createAse = require('../lib/lib/createAse').default;
 
 test('createAse is a function', function (t) {
   t.plan(1);

@@ -1,5 +1,5 @@
 var test = require('tape');
-var promise = require('../build/promise').default;
+var promise = require('../lib/lib/promise').default;
 
 test('promise is a function', function (t) {
   t.plan(1);

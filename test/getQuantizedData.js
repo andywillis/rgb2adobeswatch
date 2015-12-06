@@ -1,5 +1,5 @@
 var test = require('tape');
-var getQuantizedData = require('../build/getQuantizedData').default;
+var getQuantizedData = require('../lib/lib/getQuantizedData').default;
 
 test('getQuantizedData is a function', function (t) {
   t.plan(1);
