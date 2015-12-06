@@ -1,5 +1,5 @@
 /**
- * Promise returns an object with then() and done() methods
+ * Returns an object with then() and done() methods
  * to allow chaining.
  * @param  {object} data The data to be processed.
  * @return {object}      The processed data.
