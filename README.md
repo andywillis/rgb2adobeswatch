@@ -23,18 +23,14 @@ var rgbObj = {
 rgb2AdobeSwatch(rgbObj, writeFile);
 ```
 
-## Conversions
+## ES2015 to ES5 conversion
 
-ES2015 to ES5: `npm run es5`. Files will be placed in the `build` folder.
+`npm run es5`.
 
-## Example
+Files will be placed in the `build` folder.
 
-To run the example: `npm run example`. The `.ase` file will appear in the example folder.
+## Run the example
 
-## Documentation
+`npm run example`.
 
-To create the documentation: `npm run doc`.
-
-## Tests
-
-To run the tests: `npm test`.
+The `.ase` file will appear in the example folder.
